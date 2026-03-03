@@ -1,0 +1,16 @@
+BEGIN;
+
+EXPLAIN (ANALYZE, BUFFERS)
+UPDATE service.ads
+SET price = price + 1
+WHERE price = 1000000;
+
+ROLLBACK;
+
+BEGIN;
+
+EXPLAIN (ANALYZE, BUFFERS)
+DELETE FROM service.ads
+WHERE price = 1000000;
+
+ROLLBACK;
