@@ -1,0 +1,11 @@
+﻿pg_server_version_info:
+  query: "SELECT 1 AS value, current_setting('server_version') AS version"
+  master: true
+  cache_seconds: 300
+  metrics:
+    - value:
+        usage: "GAUGE"
+        description: "PostgreSQL version metric"
+    - version:
+        usage: "LABEL"
+        description: "PostgreSQL version"
