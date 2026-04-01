@@ -8,18 +8,28 @@ services:
       POSTGRES_PASSWORD: rk091011
     ports:
       - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+
 
   flyway:
     image: flyway/flyway:10
-    container_name: course_flyway
+    container_name: kr_flyway
     depends_on:
       - postgres
     command: -connectRetries=60 migrate
     volumes:
       - ./db/migrations:/flyway/sql
       - ./flyway.conf:/flyway/conf/flyway.conf:ro
+      
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
 
 volumes:
-  pgdata:
+  pg_data:

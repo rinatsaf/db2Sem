@@ -1,0 +1,130 @@
+services:
+  primary:
+    image: postgres:16
+    container_name: hw7_primary
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command:
+      - postgres
+      - -c
+      - wal_level=logical
+      - -c
+      - max_wal_senders=10
+      - -c
+      - max_replication_slots=10
+      - -c
+      - hot_standby=on
+    ports:
+      - "5440:5432"
+    volumes:
+      - primary_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+  replica:
+    image: postgres:16
+    container_name: hw7_replica
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+      PGDATA: /var/lib/postgresql/data
+    depends_on:
+      - primary
+    command: ["/bin/bash", "/scripts/init-replica.sh"]
+    ports:
+      - "5441:5432"
+    volumes:
+      - replica_data:/var/lib/postgresql/data
+      - ./scripts:/scripts:ro
+      - ./:/workspace
+
+  logical_pub:
+    image: postgres:16
+    container_name: hw7_logical_pub
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    command:
+      - postgres
+      - -c
+      - wal_level=logical
+      - -c
+      - max_replication_slots=10
+      - -c
+      - max_wal_senders=10
+    ports:
+      - "5442:5432"
+    volumes:
+      - logical_pub_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+  logical_sub:
+    image: postgres:16
+    container_name: hw7_logical_sub
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5443:5432"
+    volumes:
+      - logical_sub_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+  shard1:
+    image: postgres:16
+    container_name: hw7_shard1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5444:5432"
+    volumes:
+      - shard1_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+  shard2:
+    image: postgres:16
+    container_name: hw7_shard2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5445:5432"
+    volumes:
+      - shard2_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+  router:
+    image: postgres:16
+    container_name: hw7_router
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5446:5432"
+    volumes:
+      - router_data:/var/lib/postgresql/data
+      - ./:/workspace
+
+volumes:
+  primary_data:
+  replica_data:
+  logical_pub_data:
+  logical_sub_data:
+  shard1_data:
+  shard2_data:
+  router_data:
