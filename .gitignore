@@ -1,0 +1,6 @@
+# SQL дампы
+*.sql
+dumps/
+
+# Или конкретная папка
+s2/FifthHw/dumps/

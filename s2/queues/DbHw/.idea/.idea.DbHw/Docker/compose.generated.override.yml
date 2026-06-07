@@ -1,0 +1,59 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  producer:
+    build:
+      context: "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw"
+      dockerfile: "DbHw/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/DbHw.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "dbhw:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw\\DbHw:/app:rw"
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw:/src:rw"
+    - "C:\\Users\\Doom\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  worker1:
+    build:
+      context: "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw"
+      dockerfile: "Consumer/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Consumer.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "consumer:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw\\Consumer:/app:rw"
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw:/src:rw"
+    - "C:\\Users\\Doom\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  worker2:
+    build:
+      context: "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw"
+      dockerfile: "Consumer/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/Consumer.dll"
+    environment:
+      DOTNET_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "consumer:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw\\Consumer:/app:rw"
+    - "C:\\Users\\Doom\\Desktop\\OrisHWs\\auth-validation-rinatsaf\\DbHw:/src:rw"
+    - "C:\\Users\\Doom\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"

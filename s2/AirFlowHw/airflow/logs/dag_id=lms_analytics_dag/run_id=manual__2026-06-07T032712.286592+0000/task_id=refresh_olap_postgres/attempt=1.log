@@ -1,0 +1,73 @@
+[2026-06-07T03:27:13.708+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:13.742+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_analytics_dag.refresh_olap_postgres manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:13.749+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_analytics_dag.refresh_olap_postgres manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:13.750+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:13.850+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): refresh_olap_postgres> on 2026-06-07 03:27:12.286592+00:00
+[2026-06-07T03:27:13.854+0000] {standard_task_runner.py:64} INFO - Started process 394 to run task
+[2026-06-07T03:27:13.858+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_analytics_dag', 'refresh_olap_postgres', 'manual__2026-06-07T03:27:12.286592+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/lms_analytics_dag.py', '--cfg-path', '/tmp/tmp5vn73jls']
+[2026-06-07T03:27:13.860+0000] {standard_task_runner.py:91} INFO - Job 35: Subtask refresh_olap_postgres
+[2026-06-07T03:27:14.009+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_analytics_dag.refresh_olap_postgres manual__2026-06-07T03:27:12.286592+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:14.382+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_analytics_dag' AIRFLOW_CTX_TASK_ID='refresh_olap_postgres' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:27:12.286592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:27:12.286592+00:00'
+[2026-06-07T03:27:14.383+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:14.412+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:14.420+0000] {sql.py:495} INFO - Running statement: -- Manual OLAP refresh (same logic as V5__olap_etl.sql)
+TRUNCATE olap.fact_enrollment, olap.dim_user, olap.dim_flow, olap.dim_unit, olap.dim_date RESTART IDENTITY CASCADE;
+
+INSERT INTO olap.dim_date (date_key, full_date, year, quarter, month, day_of_month, day_of_week, day_name, is_weekend)
+SELECT
+    TO_CHAR(d::date, 'YYYYMMDD')::INT,
+    d::date,
+    EXTRACT(YEAR FROM d)::INT,
+    EXTRACT(QUARTER FROM d)::INT,
+    EXTRACT(MONTH FROM d)::INT,
+    EXTRACT(DAY FROM d)::INT,
+    EXTRACT(ISODOW FROM d)::INT,
+    TO_CHAR(d::date, 'Dy'),
+    EXTRACT(ISODOW FROM d) IN (6, 7)
+FROM generate_series(
+    COALESCE(
+        (SELECT (MIN(enrolled_at) - interval '1 year')::date FROM enrollment),
+        (current_date - interval '5 years')::date
+    ),
+    COALESCE(
+        (SELECT (MAX(COALESCE(dropped_at, enrolled_at)) + interval '1 year')::date FROM enrollment),
+        (current_date + interval '1 year')::date
+    ),
+    interval '1 day'
+) AS d;
+
+INSERT INTO olap.dim_unit (unit_id, name, type, status)
+SELECT id, name, type, status FROM unit;
+
+INSERT INTO olap.dim_user (user_id, full_name, status, unit_id, student_number)
+SELECT id, full_name, status, unit_id, student_number FROM "user";
+
+INSERT INTO olap.dim_flow (flow_id, code, title, modality, cohort_year, status, unit_id)
+SELECT id, code, title, modality, cohort_year, status, unit_id FROM flow;
+
+INSERT INTO olap.fact_enrollment (
+    enrollment_id, enroll_date_key, drop_date_key, user_key, flow_key, unit_key,
+    attendance_pct, current_score, is_dropped, is_completed, enrollment_cnt, status
+)
+SELECT
+    e.id,
+    TO_CHAR(e.enrolled_at::date, 'YYYYMMDD')::INT,
+    CASE WHEN e.dropped_at IS NOT NULL THEN TO_CHAR(e.dropped_at::date, 'YYYYMMDD')::INT END,
+    du.user_key, df.flow_key, dun.unit_key,
+    e.attendance_pct, e.current_score,
+    CASE WHEN e.dropped_at IS NOT NULL THEN 1 ELSE 0 END,
+    CASE WHEN e.status = 'completed' THEN 1 ELSE 0 END,
+    1, e.status
+FROM enrollment e
+JOIN olap.dim_user du ON du.user_id = e.user_id
+JOIN olap.dim_flow df ON df.flow_id = e.flow_id
+JOIN olap.dim_unit dun ON dun.unit_id = df.unit_id
+WHERE e.enrolled_at IS NOT NULL;
+, parameters: None
+[2026-06-07T03:27:40.953+0000] {sql.py:504} INFO - Rows affected: 250000
+[2026-06-07T03:27:41.065+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:41.066+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:41.084+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_analytics_dag, task_id=refresh_olap_postgres, run_id=manual__2026-06-07T03:27:12.286592+00:00, execution_date=20260607T032712, start_date=20260607T032713, end_date=20260607T032741
+[2026-06-07T03:27:41.224+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:41.250+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:41.354+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

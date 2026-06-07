@@ -1,10 +1,9 @@
 # Отчёт по индексам PostgreSQL (B-tree vs Hash)
 
 ## Данные и окружение
-- Таблица: `service.ads`
-- Объём (оценочно): ~250 000 строк (масштаб из условия: 4 таблицы по 250k)
-- Замеры: `EXPLAIN (ANALYZE, BUFFERS)`
-- Важно: цифры времени зависят от железа/кеша, ниже приведены **типичные** результаты и ожидаемые планы.
+- Таблица: `service.ads`, 250 000 строк
+- PostgreSQL 16 (Debian), Docker-контейнер
+- Замеры: `EXPLAIN (ANALYZE, BUFFERS)` — реальные результаты с запуска
 
 ---
 
@@ -28,101 +27,295 @@
 
 ---
 
-## Результаты без индексов (ожидаемо)
-Ожидаемые планы:
-- Q1/Q2/Q3/Q4/Q5: чаще всего `Seq Scan on service.ads`
+## Результаты без индексов
 
-**Комментарий:**
-- При `Seq Scan` PostgreSQL читает большую часть таблицы и затем фильтрует строки.
-- В EXPLAIN часто заметно большое число `Rows Removed by Filter`.
-- В `BUFFERS` обычно много прочитанных/затронутых страниц, что увеличивает время выполнения.
+Все 5 запросов работают через `Seq Scan` (или `Parallel Seq Scan`).
 
-Оценка времени (типично для 250k строк, без кеша):
-- Q1/Q2/Q3: ~30–120 ms (в зависимости от селективности)
-- Q4/Q5: ~50–200 ms (поиск по тексту дороже)
+### Q1: `price > 2000000 AND status_id IN (1,2)`
+```
+Seq Scan on ads  (cost=0.00..10912.00 rows=83394 width=12)
+                 (actual time=0.007..31.705 rows=83175 loops=1)
+  Filter: ((price > 2000000) AND (status_id = ANY ('{1,2}'::integer[])))
+  Rows Removed by Filter: 166825
+  Buffers: shared hit=7162
+  Planning Time: 0.524 ms
+  Execution Time: 34.004 ms
+```
+
+- 7162 страницы (56 MB) прочитано из кеша
+- 166825 строк отфильтровано, 83175 подошло
+
+### Q2: `price < 50000`
+```
+Gather  (cost=1000.00..9903.98 rows=4399 width=8)
+        (actual time=0.314..16.855 rows=4261 loops=1)
+  Workers Planned: 2
+  Workers Launched: 2
+  Buffers: shared hit=7162
+  ->  Parallel Seq Scan  (cost=0.00..8464.08 rows=1833 width=8)
+                         (actual time=0.023..9.862 rows=1420 loops=3)
+        Filter: (price < 50000)
+        Rows Removed by Filter: 81913
+  Planning Time: 0.053 ms
+  Execution Time: 17.008 ms
+```
+
+- Parallel Seq Scan с 2 воркерами, но всё равно читает всю таблицу
+
+### Q3: `price = 1000000`
+```
+Gather  (cost=1000.00..9464.18 rows=1 width=8)
+        (actual time=12.545..14.721 rows=0 loops=1)
+  Workers Planned: 2
+  Workers Launched: 2
+  Buffers: shared hit=7162
+  ->  Parallel Seq Scan  (cost=0.00..8464.08 rows=1 width=8)
+                         (actual time=10.031..10.032 rows=0 loops=3)
+        Filter: (price = 1000000)
+        Rows Removed by Filter: 83333
+  Planning Time: 0.048 ms
+  Execution Time: 14.745 ms
+```
+
+- Parallel Seq Scan, 0 строк найдено (цены ровно 1000000 нет в данных)
+
+### Q4: `LIKE '%car #12%'`
+```
+Seq Scan on ads  (cost=0.00..10287.00 rows=12626 width=23)
+                 (actual time=0.022..32.344 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ '%car #12%'::text)
+  Rows Removed by Filter: 238889
+  Buffers: shared hit=7162
+  Planning Time: 0.211 ms
+  Execution Time: 32.638 ms
+```
+- 11111 строк подошло, 238889 отфильтровано
+
+### Q5: `LIKE 'Selling car #12%'`
+```
+Seq Scan on ads  (cost=0.00..10287.00 rows=12626 width=23)
+                 (actual time=0.023..31.441 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ 'Selling car #12%'::text)
+  Rows Removed by Filter: 238889
+  Buffers: shared hit=7162
+  Planning Time: 0.162 ms
+  Execution Time: 31.757 ms
+```
+
+**Итог без индексов:**
+| Запрос | Тип сканирования | Execution Time | Buffers |
+|---|---|---|---|
+| Q1 (`>` + `IN`) | Seq Scan | 34.0 ms | hit=7162 |
+| Q2 (`<`) | Parallel Seq Scan | 17.0 ms | hit=7162 |
+| Q3 (`=`) | Parallel Seq Scan | 14.7 ms | hit=7162 |
+| Q4 (`%LIKE`) | Seq Scan | 32.6 ms | hit=7162 |
+| Q5 (`LIKE%`) | Seq Scan | 31.8 ms | hit=7162 |
 
 ---
 
 ## Сравнение: B-tree vs без индекса
 
-### Ожидаемые изменения в планах
-- Q1 (`price > ... AND status_id IN ...`):
-  - было: `Seq Scan`
-  - стало: `Bitmap Heap Scan` + `Bitmap Index Scan`
-  - с составным индексом `(status_id, price)` обычно ещё меньше чтений
-- Q2 (`price < ...`):
-  - было: `Seq Scan`
-  - стало: `Index Scan` или `Bitmap Heap Scan` по `btree(price)`
-- Q3 (`price = ...`):
-  - было: `Seq Scan`
-  - стало: `Index Scan` по `btree(price)`
-- Q4 (`LIKE '%...%'`):
-  - почти без изменений: `Seq Scan` (B-tree не помогает при ведущем `%`)
-- Q5 (`LIKE 'prefix%'`):
-  - было: `Seq Scan`
-  - стало: `Index Scan`/`Bitmap` по `text_pattern_ops`
+### Планы запросов с B-tree
 
-### Оценка выигрыша по времени (типично)
-| Запрос | Без индекса | B-tree | Разница |
-|---|---:|---:|---|
-| Q1 (`>` + `IN`) | 40–120 ms | 3–15 ms | ~×5…×30 |
-| Q2 (`<`) | 35–110 ms | 2–12 ms | ~×5…×30 |
-| Q3 (`=`) | 30–100 ms | 0.3–3 ms | ~×20…×200 |
-| Q4 (`%LIKE`) | 60–200 ms | 60–200 ms | ~без эффекта |
-| Q5 (`LIKE%`) | 50–180 ms | 1–10 ms | ~×10…×100 |
+**Q1:** `price > 2000000 AND status_id IN (1,2)`
+```
+Bitmap Heap Scan on ads  (cost=1564.35..9980.41 rows=83604 width=12)
+                         (actual time=6.060..33.214 rows=83175 loops=1)
+  Recheck Cond: (price > 2000000)
+  Filter: (status_id = ANY ('{1,2}'::integer[]))
+  Heap Blocks: exact=7162
+  Buffers: shared hit=7162 read=228
+  ->  Bitmap Index Scan on idx_ads_price_btree
+        (cost=0.00..1543.45 rows=83604 width=0)
+        (actual time=4.981..4.983 rows=83175 loops=1)
+      Index Cond: (price > 2000000)
+      Buffers: shared read=228
+  Execution Time: 35.532 ms
+```
+- `Seq Scan` → `Bitmap Index Scan + Bitmap Heap Scan`
+- Время ~ то же (35.5 vs 34 ms), т.к. `price > 2000000` охватывает 33% таблицы (83175 строк)
+- **Составной индекс `idx_ads_status_price_btree` не был использован** — планировщик счёл фильтр по `status_id IN (1,2)` недостаточно селективным
 
-**Комментарий по BUFFERS:**
-- При использовании индекса обычно заметно падает число страниц, прочитанных `shared read`, и уменьшается объём `shared hit` на уровне таблицы.
-- Это означает, что база читает **меньше данных**, а не просто “быстрее фильтрует”.
+**Q2:** `price < 50000`
+```
+Bitmap Heap Scan on ads  (cost=75.45..6437.95 rows=4004 width=8)
+                         (actual time=0.780..4.426 rows=4261 loops=1)
+  Recheck Cond: (price < 50000)
+  Heap Blocks: exact=3221
+  Buffers: shared hit=3222 read=13
+  ->  Bitmap Index Scan on idx_ads_price_btree
+        (cost=0.00..74.45 rows=4004 width=0)
+        (actual time=0.445..0.446 rows=4261 loops=1)
+      Index Cond: (price < 50000)
+      Buffers: shared hit=1 read=13
+  Execution Time: 4.580 ms
+```
+- Всего 14 страниц индекса (13 read + 1 hit) и 3221 heap block вместо 7162
+- **×3.7 быстрее** (4.6 ms vs 17.0 ms)
+
+**Q3:** `price = 1000000`
+```
+Index Scan using idx_ads_price_btree on ads
+  (cost=0.42..8.44 rows=1 width=8)
+  (actual time=0.025..0.025 rows=0 loops=1)
+  Index Cond: (price = 1000000)
+  Buffers: shared hit=2 read=1
+  Execution Time: 0.037 ms
+```
+- `Index Scan` — прямой поиск по B-tree, всего 3 страницы вместо 7162
+- **×400 быстрее** (0.037 ms vs 14.7 ms)
+
+**Q4:** `LIKE '%car #12%'`
+```
+Seq Scan on ads  (cost=0.00..10287.00 rows=10101 width=23)
+                 (actual time=0.021..33.475 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ '%car #12%'::text)
+  Rows Removed by Filter: 238889
+  Buffers: shared hit=7162
+  Execution Time: 33.773 ms
+```
+- Без изменений: `Seq Scan` — B-tree не помогает при ведущем `%`
+
+**Q5:** `LIKE 'Selling car #12%'`
+```
+Bitmap Heap Scan on ads  (cost=301.96..7964.11 rows=10101 width=23)
+                         (actual time=0.696..2.676 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ 'Selling car #12%'::text)
+  Heap Blocks: exact=354
+  Buffers: shared hit=354 read=58
+  ->  Bitmap Index Scan on idx_ads_header_prefix_btree
+        (cost=0.00..299.43 rows=9901 width=0)
+        (actual time=0.660..0.660 rows=11111 loops=1)
+      Index Cond: ((header_text)::text ~>=~ 'Selling car #12'::text
+               AND (header_text)::text ~<~ 'Selling car #13'::text)
+      Buffers: shared read=58
+  Execution Time: 3.039 ms
+```
+- B-tree с `text_pattern_ops` преобразовал `LIKE 'prefix%'` в диапазонное условие
+- 58 страниц индекса + 354 таблицы (против 7162)
+- **×10 быстрее** (3.0 ms vs 31.8 ms)
+
+### Итоговая таблица B-tree
+| Запрос | План без индекса | План с B-tree | Без индекса | B-tree | Разница |
+|---|---|---|---:|---:|---|
+| Q1 (`>` + `IN`) | Seq Scan | Bitmap Index Scan | 34.0 ms | 35.5 ms | ~1× |
+| Q2 (`<`) | Parallel Seq Scan | Bitmap Index Scan | 17.0 ms | 4.6 ms | **×3.7** |
+| Q3 (`=`) | Parallel Seq Scan | Index Scan | 14.7 ms | 0.037 ms | **×400** |
+| Q4 (`%LIKE`) | Seq Scan | Seq Scan | 32.6 ms | 33.8 ms | ~1× |
+| Q5 (`LIKE%`) | Seq Scan | Bitmap Index Scan | 31.8 ms | 3.0 ms | **×10** |
+
+**Сравнение BUFFERS:**
+| Запрос | Без индекса | B-tree |
+|---|---|---|
+| Q1 | hit=7162 | hit=7162 read=228 |
+| Q2 | hit=7162 | hit=3222 read=13 |
+| Q3 | hit=7162 | hit=2 read=1 |
+| Q5 | hit=7162 | hit=354 read=58 |
 
 ---
 
 ## Сравнение: Hash vs без индекса
 
-### Ожидаемые изменения в планах
-- Q3 (`price = ...`):
-  - было: `Seq Scan`
-  - стало: `Index Scan` по `hash(price)` (или bitmap)
-- Q1/Q2 (диапазоны):
-  - обычно **без изменений**: `Seq Scan` (hash не поддерживает `>`/`<`)
-- Q4/Q5 (LIKE):
-  - без изменений: `Seq Scan` (hash не подходит для LIKE)
+### Планы запросов с Hash
 
-### Оценка выигрыша по времени (типично)
-| Запрос | Без индекса | Hash | Разница |
-|---|---:|---:|---|
-| Q1 (`>` + `IN`) | 40–120 ms | 40–120 ms | ~без эффекта |
-| Q2 (`<`) | 35–110 ms | 35–110 ms | ~без эффекта |
-| Q3 (`=`) | 30–100 ms | 0.3–2 ms | ~×20…×200 |
-| Q4 (`%LIKE`) | 60–200 ms | 60–200 ms | ~без эффекта |
-| Q5 (`LIKE%`) | 50–180 ms | 50–180 ms | ~без эффекта |
+**Q1:** `price > 2000000 AND status_id IN (1,2)`
+```
+Seq Scan on ads  (cost=0.00..10912.00 rows=83209 width=12)
+                 (actual time=0.021..35.584 rows=83175 loops=1)
+  Filter: ((price > 2000000) AND (status_id = ANY ('{1,2}'::integer[])))
+  Rows Removed by Filter: 166825
+  Buffers: shared hit=7162
+  Execution Time: 37.755 ms
+```
+- `Seq Scan` — hash не поддерживает `>`, бесполезен
 
-**Вывод:** Hash-индекс целесообразен в основном для чистых equality-запросов, но для учебной задачи он хорошо показывает отличие от B-tree на диапазонах.
+**Q2:** `price < 50000`
+```
+Gather  (cost=1000.00..9910.18 rows=4461 width=8)
+        (actual time=0.404..17.022 rows=4261 loops=1)
+  Workers Planned: 2
+  Workers Launched: 2
+  Buffers: shared hit=7162
+  ->  Parallel Seq Scan  (cost=0.00..8464.08 rows=1859 width=8)
+                         (actual time=0.020..10.507 rows=1420 loops=3)
+        Filter: (price < 50000)
+        Rows Removed by Filter: 81913
+  Execution Time: 17.205 ms
+```
+- `Parallel Seq Scan` — hash не поддерживает `<`
+
+**Q3:** `price = 1000000`
+```
+Index Scan using idx_ads_price_hash on ads
+  (cost=0.00..8.02 rows=1 width=8)
+  (actual time=0.032..0.032 rows=0 loops=1)
+  Index Cond: (price = 1000000)
+  Buffers: shared hit=2
+  Execution Time: 0.054 ms
+```
+- `Index Scan` по hash — 2 страницы (hit=2), 0.054 ms
+- **×270 быстрее** (0.054 ms vs 14.7 ms)
+- B-tree был чуть быстрее (0.037 ms) за счёт меньших накладных расходов
+
+**Q4:** `LIKE '%car #12%'`
+```
+Seq Scan on ads  (cost=0.00..10287.00 rows=12626 width=23)
+                 (actual time=0.010..30.410 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ '%car #12%'::text)
+  Rows Removed by Filter: 238889
+  Buffers: shared hit=7162
+  Execution Time: 30.707 ms
+```
+- Без изменений: `Seq Scan`
+
+**Q5:** `LIKE 'Selling car #12%'`
+```
+Seq Scan on ads  (cost=0.00..10287.00 rows=12626 width=23)
+                 (actual time=0.009..30.440 rows=11111 loops=1)
+  Filter: ((header_text)::text ~~ 'Selling car #12%'::text)
+  Rows Removed by Filter: 238889
+  Buffers: shared hit=7162
+  Execution Time: 30.735 ms
+```
+- Без изменений: `Seq Scan` — hash не подходит для LIKE
+
+### Итоговая таблица Hash
+| Запрос | План без индекса | План с Hash | Без индекса | Hash | Разница |
+|---|---|---|---:|---:|---|
+| Q1 (`>` + `IN`) | Seq Scan | Seq Scan | 34.0 ms | 37.8 ms | ~1× |
+| Q2 (`<`) | Parallel Seq Scan | Parallel Seq Scan | 17.0 ms | 17.2 ms | ~1× |
+| Q3 (`=`) | Parallel Seq Scan | **Index Scan** | 14.7 ms | **0.054 ms** | **×270** |
+| Q4 (`%LIKE`) | Seq Scan | Seq Scan | 32.6 ms | 30.7 ms | ~1× |
+| Q5 (`LIKE%`) | Seq Scan | Seq Scan | 31.8 ms | 30.7 ms | ~1× |
+
+**Вывод:** Hash-индекс ускоряет только `=`. Для диапазонов (`>`, `<`) и LIKE бесполезен. B-tree чуть быстрее Hash на равенстве (0.037 vs 0.054 ms) за счёт лучшей кластеризации.
 
 ---
 
 ## ДОП: составной индекс (status_id, price)
-**Почему помогает Q1:**  
-Запрос использует одновременно `status_id` и `price`. Составной индекс позволяет сначала сузить множество по `status_id`, а затем применить условие по `price`, уменьшая число обращений к таблице и количество страниц в `BUFFERS`.
 
-Ожидаемо:
-- меньше `Heap Blocks` в плане,
-- меньше `shared hit/read`,
-- ниже `Execution Time`, чем с одиночным индексом только на `price`.
+Был создан составной B-tree индекс `idx_ads_status_price_btree` на `(status_id, price)`.
+
+**Результат:** Планировщик **не использовал** его для Q1. Вместо этого был выбран `idx_ads_price_btree`. Причина: условие `status_id IN (1,2)` покрывает 2 из 3 возможных статусов — фильтр недостаточно селективен, и планировщик решил, что проверка `status_id` после чтения из индекса по цене дешевле.
+
+Это демонстрирует, что составной индекс эффективен, когда **первое поле** в индексе хорошо фильтрует данные (например, `status_id = 3` для одного конкретного статуса). Для `IN (1,2)` с двумя значениями из трёх выигрыш минимален.
 
 ---
 
 ## Итоговые выводы
-1. Без индексов большинство запросов работают через `Seq Scan`, время зависит линейно от размера таблицы.
-2. B-tree индекс универсален: ускоряет `=`, `IN`, диапазоны `> / <` и `LIKE 'prefix%'` (при `text_pattern_ops`).
-3. Hash индекс полезен в основном для `=`, но не применим к диапазонам и LIKE.
-4. Запрос `LIKE '%...%'` не ускоряется B-tree/Hash и требует других индексов (например, GIN + pg_trgm), но это вне задания.
+
+1. **Без индексов** — `Seq Scan` на всех запросах, время 15–35 ms.
+2. **B-tree** универсален: ускоряет `=`, диапазоны (`>`/`<`) и `LIKE 'prefix%'` (с `text_pattern_ops`).
+3. **Hash** ускоряет только `=` (0.054 ms), но не применим к диапазонам (остаётся Seq Scan).
+4. **LIKE '%...%'** не ускоряется ни B-tree, ни Hash (нужен GIN + pg_trgm).
+5. **Составной индекс** не всегда выбирается планировщиком — его эффективность зависит от селективности первого поля.
+6. **BUFFERS**: B-tree радикально снижает количество читаемых страниц для селективных запросов (с 7162 до 2–354), Hash — только для равенства (до 2 страниц).
 
 ---
 
-## Приложение: какие файлы использовать
-- `00_setup_optional.sql`
-- `02_drop_hw_indexes.sql`
-- `03_create_btree_indexes.sql`
-- `04_create_hash_index.sql`
-- `01_queries.sql`
+## Приложение: файлы
+- `00_setup_optional.sql` — VACUUM ANALYZE
+- `02_drop_hw_indexes.sql` — удаление индексов
+- `03_create_btree_indexes.sql` — создание B-tree + составного
+- `04_create_hash_index.sql` — создание Hash
+- `01_queries.sql` — 5 тестовых запросов с EXPLAIN (ANALYZE, BUFFERS)

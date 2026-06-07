@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "TbKk7PmAXf4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Doom\\Desktop\\бд\\db2Sem\\s2\\queues\\DbHw\\Consumer\\Consumer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Doom\\.nuget\\packages\\ado.net.npgsql.dataentity\\1.0.2\\ado.net.npgsql.dataentity.1.0.2.nupkg.sha512",
+    "C:\\Users\\Doom\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Doom\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Doom\\.nuget\\packages\\npgsql\\8.0.1\\npgsql.8.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql' 8.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}

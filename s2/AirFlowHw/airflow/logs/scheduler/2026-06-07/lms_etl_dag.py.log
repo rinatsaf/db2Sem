@@ -1,0 +1,644 @@
+[2026-06-07T03:24:03.130+0000] {processor.py:161} INFO - Started process (PID=193) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:03.131+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:24:03.134+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:03.133+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:03.789+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:03.894+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:03.893+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:24:03.906+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:03.906+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:24:04.661+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 1.540 seconds
+[2026-06-07T03:24:34.949+0000] {processor.py:161} INFO - Started process (PID=216) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:34.950+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:24:34.952+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:34.952+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:35.376+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:24:35.401+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:35.401+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:24:35.410+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:24:35.410+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:24:35.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.572 seconds
+[2026-06-07T03:25:05.626+0000] {processor.py:161} INFO - Started process (PID=243) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:05.627+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:25:05.629+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:05.629+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:06.097+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:06.120+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:06.120+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:25:06.129+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:06.129+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:25:06.261+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.641 seconds
+[2026-06-07T03:25:36.384+0000] {processor.py:161} INFO - Started process (PID=265) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:36.385+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:25:36.387+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:36.387+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:36.678+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:25:36.704+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:36.704+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:25:36.715+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:25:36.715+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:25:36.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.501 seconds
+[2026-06-07T03:26:07.062+0000] {processor.py:161} INFO - Started process (PID=289) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:07.064+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:26:07.065+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:07.065+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:07.646+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:07.725+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:07.725+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:26:07.748+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:07.748+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:26:07.963+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.907 seconds
+[2026-06-07T03:26:38.224+0000] {processor.py:161} INFO - Started process (PID=311) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:38.225+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:26:38.228+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:38.227+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:38.539+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:26:38.566+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:38.566+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:26:38.578+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:26:38.578+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:26:38.705+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.489 seconds
+[2026-06-07T03:27:08.980+0000] {processor.py:161} INFO - Started process (PID=376) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:08.981+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:27:08.983+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:08.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:09.288+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:09.315+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:09.314+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:27:09.325+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:09.325+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:27:09.477+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.504 seconds
+[2026-06-07T03:27:39.830+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:39.832+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:27:39.834+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:39.834+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:40.186+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:27:40.217+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:40.217+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:27:40.229+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:27:40.229+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:27:40.402+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.579 seconds
+[2026-06-07T03:28:10.608+0000] {processor.py:161} INFO - Started process (PID=442) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:10.609+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:28:10.611+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:10.610+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:10.892+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:10.917+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:10.917+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:28:10.927+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:10.927+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:28:11.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.428 seconds
+[2026-06-07T03:28:41.186+0000] {processor.py:161} INFO - Started process (PID=464) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:41.187+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:28:41.189+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:41.189+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:41.628+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:28:41.670+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:41.669+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:28:41.689+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:28:41.689+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:28:41.872+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.694 seconds
+[2026-06-07T03:29:11.954+0000] {processor.py:161} INFO - Started process (PID=486) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:11.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:29:11.959+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:11.958+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:12.266+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:12.295+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:12.294+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:29:12.306+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:12.306+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:29:12.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.559 seconds
+[2026-06-07T03:29:42.857+0000] {processor.py:161} INFO - Started process (PID=508) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:42.859+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:29:42.860+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:42.860+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:43.145+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:29:43.171+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:43.171+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:29:43.182+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:29:43.182+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:29:43.359+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.510 seconds
+[2026-06-07T03:30:13.628+0000] {processor.py:161} INFO - Started process (PID=530) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:13.630+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:30:13.632+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:13.631+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:13.927+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:13.955+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:13.955+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:30:13.966+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:13.966+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:30:14.324+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.704 seconds
+[2026-06-07T03:30:44.947+0000] {processor.py:161} INFO - Started process (PID=552) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:44.949+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:30:44.951+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:44.951+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:45.291+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:30:45.318+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:45.318+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:30:45.331+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:30:45.331+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:30:45.427+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.489 seconds
+[2026-06-07T03:31:15.653+0000] {processor.py:161} INFO - Started process (PID=574) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:15.654+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:31:15.656+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:15.656+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:15.970+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:16.002+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:16.002+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:31:16.013+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:16.013+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:31:16.166+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.519 seconds
+[2026-06-07T03:31:46.507+0000] {processor.py:161} INFO - Started process (PID=590) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:46.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:31:46.510+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:46.510+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:46.791+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:31:46.816+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:46.815+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:31:46.826+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:31:46.826+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:31:46.914+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.416 seconds
+[2026-06-07T03:32:17.308+0000] {processor.py:161} INFO - Started process (PID=612) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:17.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:32:17.311+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:17.311+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:17.629+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:17.658+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:17.658+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:32:17.669+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:17.668+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:32:18.198+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.901 seconds
+[2026-06-07T03:32:48.347+0000] {processor.py:161} INFO - Started process (PID=634) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:48.351+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:32:48.354+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:48.353+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:48.849+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:32:48.875+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:48.875+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:32:48.886+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:32:48.886+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:32:49.128+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.800 seconds
+[2026-06-07T03:33:19.471+0000] {processor.py:161} INFO - Started process (PID=656) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:19.472+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:33:19.474+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:19.474+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:19.761+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:19.787+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:19.786+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:33:19.802+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:19.802+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:33:20.021+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.557 seconds
+[2026-06-07T03:33:50.279+0000] {processor.py:161} INFO - Started process (PID=678) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:50.280+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:33:50.282+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:50.282+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:50.591+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:33:50.639+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:50.639+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:33:50.656+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:33:50.655+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:33:50.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.583 seconds
+[2026-06-07T03:34:21.204+0000] {processor.py:161} INFO - Started process (PID=700) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:21.205+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:34:21.207+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:21.206+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:21.504+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:21.530+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:21.529+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:34:21.541+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:21.540+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:34:21.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.446 seconds
+[2026-06-07T03:34:51.828+0000] {processor.py:161} INFO - Started process (PID=722) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:51.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:34:51.832+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:51.831+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:52.147+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:34:52.175+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:52.175+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:34:52.187+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:34:52.187+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:34:52.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.483 seconds
+[2026-06-07T03:35:22.414+0000] {processor.py:161} INFO - Started process (PID=744) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:22.416+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:35:22.418+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:22.417+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:22.715+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:22.742+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:22.742+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:35:22.754+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:22.754+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:35:22.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.516 seconds
+[2026-06-07T03:35:53.269+0000] {processor.py:161} INFO - Started process (PID=766) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:53.270+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:35:53.272+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:53.272+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:53.583+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:35:53.610+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:53.609+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:35:53.620+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:35:53.620+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:35:53.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.513 seconds
+[2026-06-07T03:36:23.836+0000] {processor.py:161} INFO - Started process (PID=788) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:23.838+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:36:23.841+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:23.840+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:24.150+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:24.176+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:24.175+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:36:24.186+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:24.186+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:36:24.310+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.481 seconds
+[2026-06-07T03:36:54.382+0000] {processor.py:161} INFO - Started process (PID=810) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:54.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:36:54.385+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:54.385+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:54.717+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:36:54.745+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:54.745+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:36:54.759+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:36:54.758+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:36:54.920+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.545 seconds
+[2026-06-07T03:37:25.063+0000] {processor.py:161} INFO - Started process (PID=832) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:25.065+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:37:25.067+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:25.066+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:25.364+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:25.391+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:25.391+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:37:25.402+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:25.401+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:37:25.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.478 seconds
+[2026-06-07T03:37:55.631+0000] {processor.py:161} INFO - Started process (PID=854) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:55.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:37:55.634+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:55.634+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:55.988+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:37:56.017+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:56.016+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:37:56.028+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:37:56.028+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:37:56.186+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.562 seconds
+[2026-06-07T03:38:26.546+0000] {processor.py:161} INFO - Started process (PID=876) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:26.547+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:38:26.550+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:26.550+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:26.904+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:26.933+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:26.933+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:38:26.948+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:26.947+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:38:27.133+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.594 seconds
+[2026-06-07T03:38:57.432+0000] {processor.py:161} INFO - Started process (PID=898) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:57.433+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:38:57.435+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:57.435+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:57.736+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:38:57.766+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:57.765+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:38:57.777+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:38:57.777+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:38:57.989+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.564 seconds
+[2026-06-07T03:39:28.854+0000] {processor.py:161} INFO - Started process (PID=920) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:39:28.856+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:39:28.864+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:39:28.863+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:39:29.789+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:39:29.851+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:39:29.850+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:39:29.876+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:39:29.876+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:39:30.061+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 1.229 seconds
+[2026-06-07T03:40:00.566+0000] {processor.py:161} INFO - Started process (PID=936) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:00.568+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:40:00.571+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:00.570+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:01.599+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:01.670+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:01.669+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:40:01.686+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:01.686+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:40:01.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 1.340 seconds
+[2026-06-07T03:40:32.090+0000] {processor.py:161} INFO - Started process (PID=958) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:32.091+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:40:32.093+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:32.093+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:32.514+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:40:32.549+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:32.548+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:40:32.567+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:40:32.567+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:40:32.741+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.658 seconds
+[2026-06-07T03:41:02.894+0000] {processor.py:161} INFO - Started process (PID=980) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:02.896+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:41:02.898+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:02.897+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:03.210+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:03.237+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:03.237+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:41:03.248+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:03.248+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:41:03.351+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.466 seconds
+[2026-06-07T03:41:34.205+0000] {processor.py:161} INFO - Started process (PID=1002) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:34.207+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:41:34.209+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:34.209+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:34.493+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:41:34.518+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:34.517+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:41:34.528+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:41:34.528+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:41:34.647+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.452 seconds
+[2026-06-07T03:42:04.713+0000] {processor.py:161} INFO - Started process (PID=1024) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:04.714+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:42:04.716+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:04.716+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:04.997+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:05.025+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:05.024+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:42:05.035+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:05.035+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:42:05.164+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.458 seconds
+[2026-06-07T03:42:35.272+0000] {processor.py:161} INFO - Started process (PID=1046) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:35.274+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:42:35.276+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:35.276+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:35.578+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:42:35.603+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:35.602+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:42:35.617+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:42:35.617+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:42:35.718+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.452 seconds
+[2026-06-07T03:43:05.861+0000] {processor.py:161} INFO - Started process (PID=1068) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:05.863+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:43:05.865+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:05.864+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:06.145+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:06.170+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:06.169+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:43:06.181+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:06.181+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:43:06.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.449 seconds
+[2026-06-07T03:43:36.636+0000] {processor.py:161} INFO - Started process (PID=1090) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:36.637+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:43:36.639+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:36.639+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:36.946+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:43:36.971+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:36.971+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:43:36.986+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:43:36.986+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:43:37.110+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.482 seconds
+[2026-06-07T03:44:07.481+0000] {processor.py:161} INFO - Started process (PID=1112) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:07.482+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:44:07.485+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:07.484+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:07.793+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:07.822+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:07.821+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:44:07.835+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:07.835+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:44:07.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.466 seconds
+[2026-06-07T03:44:38.163+0000] {processor.py:161} INFO - Started process (PID=1134) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:38.165+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:44:38.166+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:38.166+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:38.467+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:44:38.497+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:38.496+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:44:38.509+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:44:38.509+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:44:38.622+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.465 seconds
+[2026-06-07T03:45:09.468+0000] {processor.py:161} INFO - Started process (PID=1156) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:09.469+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:45:09.472+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:09.471+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:09.820+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:09.865+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:09.864+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:45:09.886+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:09.886+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:45:10.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.559 seconds
+[2026-06-07T03:45:40.121+0000] {processor.py:161} INFO - Started process (PID=1178) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:40.122+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:45:40.124+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:40.124+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:40.426+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:45:40.455+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:40.455+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:45:40.469+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:45:40.469+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:45:40.634+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.520 seconds
+[2026-06-07T03:46:11.437+0000] {processor.py:161} INFO - Started process (PID=1200) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:11.438+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:46:11.440+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:11.440+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:11.729+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:11.754+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:11.753+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:46:11.764+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:11.763+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:46:11.925+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.494 seconds
+[2026-06-07T03:46:42.059+0000] {processor.py:161} INFO - Started process (PID=1222) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:42.060+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:46:42.062+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:42.062+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:42.350+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:46:42.376+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:42.376+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:46:42.388+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:46:42.388+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:46:42.502+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.449 seconds
+[2026-06-07T03:47:12.563+0000] {processor.py:161} INFO - Started process (PID=1244) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:12.564+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:47:12.566+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:12.566+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:12.954+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:12.990+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:12.990+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:47:13.004+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:13.004+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:47:13.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.598 seconds
+[2026-06-07T03:47:43.762+0000] {processor.py:161} INFO - Started process (PID=1266) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:43.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:47:43.780+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:43.779+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:44.113+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:47:44.150+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:44.149+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:47:44.161+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:47:44.161+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:47:44.370+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.629 seconds
+[2026-06-07T03:48:14.731+0000] {processor.py:161} INFO - Started process (PID=1282) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:14.733+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:48:14.735+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:14.734+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:15.017+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:15.044+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:15.044+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:48:15.057+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:15.057+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:48:15.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.538 seconds
+[2026-06-07T03:48:45.396+0000] {processor.py:161} INFO - Started process (PID=1304) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:45.397+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:48:45.399+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:45.398+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:45.698+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:48:45.726+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:45.726+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:48:45.738+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:48:45.738+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:48:45.917+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.528 seconds
+[2026-06-07T03:49:15.970+0000] {processor.py:161} INFO - Started process (PID=1326) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:15.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:49:15.973+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:15.973+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:16.266+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:16.292+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:16.292+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:49:16.304+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:16.304+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:49:16.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.467 seconds
+[2026-06-07T03:49:47.273+0000] {processor.py:161} INFO - Started process (PID=1348) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:47.274+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:49:47.277+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:47.276+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:47.562+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:49:47.588+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:47.588+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:49:47.600+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:49:47.599+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:49:47.714+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.447 seconds
+[2026-06-07T03:50:17.831+0000] {processor.py:161} INFO - Started process (PID=1370) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:17.833+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:50:17.836+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:17.835+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:18.298+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:18.343+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:18.342+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:50:18.368+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:18.368+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:50:18.513+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.693 seconds
+[2026-06-07T03:50:48.671+0000] {processor.py:161} INFO - Started process (PID=1392) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:48.677+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:50:48.682+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:48.681+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:50.067+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:50:50.132+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:50.132+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:50:50.164+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:50:50.164+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:50:50.361+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 1.710 seconds
+[2026-06-07T03:51:21.116+0000] {processor.py:161} INFO - Started process (PID=1414) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:21.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:51:21.124+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:21.123+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:21.586+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:21.614+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:21.614+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:51:21.627+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:21.627+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:51:21.914+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.806 seconds
+[2026-06-07T03:51:52.350+0000] {processor.py:161} INFO - Started process (PID=1436) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:52.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:51:52.354+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:52.354+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:52.911+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:51:52.950+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:52.950+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:51:52.972+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:51:52.972+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:51:53.293+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.955 seconds
+[2026-06-07T03:52:23.655+0000] {processor.py:161} INFO - Started process (PID=1458) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:23.656+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:52:23.658+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:23.658+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:24.008+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:24.038+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:24.038+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:52:24.055+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:24.054+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:52:24.398+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.750 seconds
+[2026-06-07T03:52:55.201+0000] {processor.py:161} INFO - Started process (PID=1481) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:55.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:52:55.204+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:55.204+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:55.486+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:52:55.519+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:55.519+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:52:55.531+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:52:55.531+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:52:55.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.545 seconds
+[2026-06-07T03:53:26.029+0000] {processor.py:161} INFO - Started process (PID=1503) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:26.030+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:53:26.032+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:26.032+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:26.346+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:26.378+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:26.377+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:53:26.392+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:26.392+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:53:26.495+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.473 seconds
+[2026-06-07T03:53:56.868+0000] {processor.py:161} INFO - Started process (PID=1525) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:56.869+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:53:56.874+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:56.873+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:57.303+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:53:57.334+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:57.333+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:53:57.347+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:53:57.347+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:53:57.485+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.627 seconds
+[2026-06-07T03:54:27.626+0000] {processor.py:161} INFO - Started process (PID=1547) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:27.627+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:54:27.629+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:27.629+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:27.908+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:27.934+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:27.934+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:54:27.945+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:27.945+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:54:28.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.460 seconds
+[2026-06-07T03:54:59.061+0000] {processor.py:161} INFO - Started process (PID=1569) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:59.063+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:54:59.065+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:59.065+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:59.412+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:54:59.446+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:59.445+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:54:59.459+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:54:59.459+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:54:59.561+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.518 seconds
+[2026-06-07T03:55:29.656+0000] {processor.py:161} INFO - Started process (PID=1591) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:55:29.657+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:55:29.659+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:55:29.659+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:55:29.966+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:55:29.992+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:55:29.991+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:55:30.002+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:55:30.002+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:55:30.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.456 seconds
+[2026-06-07T03:56:01.003+0000] {processor.py:161} INFO - Started process (PID=1613) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:01.004+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:56:01.006+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:01.006+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:01.291+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:01.319+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:01.318+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:56:01.330+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:01.330+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:56:01.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.452 seconds
+[2026-06-07T03:56:31.670+0000] {processor.py:161} INFO - Started process (PID=1635) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:31.671+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:56:31.673+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:31.673+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:31.957+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:56:31.983+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:31.983+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:56:31.994+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:56:31.993+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:56:32.121+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.458 seconds
+[2026-06-07T03:57:03.066+0000] {processor.py:161} INFO - Started process (PID=1657) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:03.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:57:03.070+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:03.069+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:03.420+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:03.447+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:03.446+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:57:03.459+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:03.459+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:57:03.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.537 seconds
+[2026-06-07T03:57:34.436+0000] {processor.py:161} INFO - Started process (PID=1684) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:34.438+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:57:34.440+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:34.440+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:34.790+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:57:34.820+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:34.819+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:57:34.832+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:57:34.832+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:57:35.071+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.644 seconds
+[2026-06-07T03:58:05.592+0000] {processor.py:161} INFO - Started process (PID=1700) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:05.594+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:58:05.597+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:05.596+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:06.002+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:06.035+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:06.035+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:58:06.241+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:06.240+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:58:06.408+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.827 seconds
+[2026-06-07T03:58:36.886+0000] {processor.py:161} INFO - Started process (PID=1722) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:36.887+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:58:36.889+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:36.889+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:37.172+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:58:37.198+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:37.197+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:58:37.208+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:58:37.208+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:58:37.319+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.440 seconds
+[2026-06-07T03:59:08.316+0000] {processor.py:161} INFO - Started process (PID=1744) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:08.317+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:59:08.319+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:08.319+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:08.596+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:08.621+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:08.620+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:59:08.631+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:08.631+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:59:08.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.513 seconds
+[2026-06-07T03:59:39.755+0000] {processor.py:161} INFO - Started process (PID=1766) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:39.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T03:59:39.760+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:39.759+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:40.279+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T03:59:40.313+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:40.313+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T03:59:40.327+0000] {logging_mixin.py:188} INFO - [2026-06-07T03:59:40.327+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T03:59:40.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.684 seconds
+[2026-06-07T23:00:11.154+0000] {processor.py:161} INFO - Started process (PID=1788) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:11.155+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:00:11.157+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:11.156+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:11.487+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:11.515+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:11.514+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:00:11.531+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:11.531+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:00:11.698+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.551 seconds
+[2026-06-07T23:00:42.441+0000] {processor.py:161} INFO - Started process (PID=1810) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:42.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:00:42.445+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:42.444+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:42.742+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:00:42.768+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:42.767+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:00:42.911+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:00:42.911+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:00:43.239+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.808 seconds
+[2026-06-07T23:01:13.737+0000] {processor.py:161} INFO - Started process (PID=1832) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:13.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:01:13.741+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:13.740+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:14.024+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:14.049+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:14.049+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:01:14.060+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:14.060+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:01:14.164+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.434 seconds
+[2026-06-07T23:01:44.461+0000] {processor.py:161} INFO - Started process (PID=1854) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:44.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:01:44.464+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:44.464+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:44.746+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:01:44.771+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:44.770+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:01:44.782+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:01:44.782+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:01:45.033+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.578 seconds
+[2026-06-07T23:02:15.762+0000] {processor.py:161} INFO - Started process (PID=1876) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:15.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:02:15.765+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:15.765+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:16.174+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:16.364+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:16.364+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:02:16.374+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:16.374+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:02:16.510+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.755 seconds
+[2026-06-07T23:02:47.065+0000] {processor.py:161} INFO - Started process (PID=1898) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:47.066+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:02:47.068+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:47.068+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:47.347+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:02:47.374+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:47.373+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:02:47.385+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:02:47.385+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:02:47.495+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.437 seconds
+[2026-06-07T23:03:18.372+0000] {processor.py:161} INFO - Started process (PID=1920) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:18.373+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:03:18.375+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:18.375+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:18.662+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:18.688+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:18.688+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:03:18.828+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:18.828+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:03:18.945+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.580 seconds
+[2026-06-07T23:03:49.469+0000] {processor.py:161} INFO - Started process (PID=1942) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:49.470+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:03:49.472+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:49.472+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:49.889+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:03:49.917+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:49.916+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:03:49.927+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:03:49.927+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:03:50.026+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.563 seconds
+[2026-06-07T23:04:20.819+0000] {processor.py:161} INFO - Started process (PID=1964) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:20.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:04:20.822+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:20.822+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:21.241+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:21.264+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:21.264+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:04:21.275+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:21.275+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:04:21.416+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.603 seconds
+[2026-06-07T23:04:52.152+0000] {processor.py:161} INFO - Started process (PID=1986) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:52.153+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:04:52.155+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:52.155+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:52.641+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:04:52.664+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:52.664+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:04:52.673+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:04:52.673+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:04:52.836+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.692 seconds
+[2026-06-07T23:05:23.504+0000] {processor.py:161} INFO - Started process (PID=2008) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:23.505+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:05:23.507+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:23.507+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:23.970+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:23.995+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:23.995+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:05:24.008+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:24.008+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:05:24.257+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.763 seconds
+[2026-06-07T23:05:54.788+0000] {processor.py:161} INFO - Started process (PID=2030) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:54.790+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:05:54.792+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:54.791+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:55.221+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:05:55.245+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:55.245+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:05:55.255+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:05:55.255+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:05:55.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.684 seconds
+[2026-06-07T23:06:26.072+0000] {processor.py:161} INFO - Started process (PID=2052) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:26.073+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:06:26.075+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:26.075+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:26.493+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:26.517+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:26.517+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:06:26.526+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:26.526+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:06:26.686+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.620 seconds
+[2026-06-07T23:06:57.366+0000] {processor.py:161} INFO - Started process (PID=2074) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:57.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:06:57.369+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:57.369+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:57.829+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:06:57.851+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:57.851+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:06:57.860+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:06:57.860+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:06:57.976+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.618 seconds
+[2026-06-07T23:07:28.140+0000] {processor.py:161} INFO - Started process (PID=2101) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:28.141+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:07:28.144+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:28.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:28.555+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:28.578+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:28.578+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:07:28.587+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:28.587+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:07:28.671+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.538 seconds
+[2026-06-07T23:07:59.490+0000] {processor.py:161} INFO - Started process (PID=2123) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:59.492+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:07:59.495+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:59.495+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:59.918+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:07:59.941+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:59.940+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:07:59.950+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:07:59.950+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:08:00.064+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.583 seconds
+[2026-06-07T23:08:30.887+0000] {processor.py:161} INFO - Started process (PID=2145) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:08:30.889+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:08:30.892+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:08:30.892+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:08:31.310+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:08:31.341+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:08:31.341+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:08:31.352+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:08:31.352+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:08:31.450+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.571 seconds
+[2026-06-07T23:09:01.608+0000] {processor.py:161} INFO - Started process (PID=2167) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:01.609+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:09:01.611+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:01.611+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:02.013+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:02.035+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:02.034+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:09:02.043+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:02.043+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:09:02.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.554 seconds
+[2026-06-07T23:09:32.558+0000] {processor.py:161} INFO - Started process (PID=2190) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:32.559+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:09:32.561+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:32.561+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:32.978+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:09:33.000+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:33.000+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:09:33.011+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:09:33.011+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:09:33.210+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.658 seconds
+[2026-06-07T23:10:03.415+0000] {processor.py:161} INFO - Started process (PID=2212) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:03.416+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:10:03.419+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:03.419+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:04.023+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:04.072+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:04.071+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:10:04.087+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:04.087+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:10:04.364+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.955 seconds
+[2026-06-07T23:10:34.453+0000] {processor.py:161} INFO - Started process (PID=2228) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:34.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:10:34.456+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:34.456+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:34.893+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:10:34.917+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:34.917+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:10:34.926+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:10:34.926+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:10:35.128+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.682 seconds
+[2026-06-07T23:11:05.357+0000] {processor.py:161} INFO - Started process (PID=2250) to work on /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:11:05.358+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/lms_etl_dag.py for tasks to queue
+[2026-06-07T23:11:05.361+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:11:05.360+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:11:05.814+0000] {processor.py:840} INFO - DAG(s) 'lms_etl_dag' retrieved from /opt/airflow/dags/lms_etl_dag.py
+[2026-06-07T23:11:05.849+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:11:05.848+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-07T23:11:05.866+0000] {logging_mixin.py:188} INFO - [2026-06-07T23:11:05.865+0000] {dag.py:3947} INFO - Setting next_dagrun for lms_etl_dag to None, run_after=None
+[2026-06-07T23:11:06.173+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/lms_etl_dag.py took 0.823 seconds

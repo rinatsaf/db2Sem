@@ -3,7 +3,7 @@ services:
     image: postgres:16
     container_name: kr
     environment:
-      POSTGRES_DB: kr_db
+      POSTGRES_DB: autoru_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: rk091011
     ports:

@@ -1,0 +1,31 @@
+services:
+  influxdb3-core:
+    image: influxdb:3-core
+    container_name: influxdb3-core
+    ports:
+      - "8181:8181"
+    command:
+      - influxdb3
+      - serve
+      - --node-id=node0
+      - --object-store=file
+      - --data-dir=/var/lib/influxdb3/data
+      - --plugin-dir=/var/lib/influxdb3/plugins
+    volumes:
+      - ./trash/data:/var/lib/influxdb3/data
+      - ./trash/plugins:/var/lib/influxdb3/plugins
+
+  explorer:
+    image: influxdata/influxdb3-ui:1.6.2
+    container_name: influxdb3-explorer
+    ports:
+      - "8888:80"
+    depends_on:
+      - influxdb3-core
+    command: ["--mode=admin"]
+    environment:
+      SESSION_SECRET_KEY: "long_random_string"
+      INFLUXDB_URL: "http://influxdb3-core:8181"
+    volumes:
+      - ./trash/explorer-db:/db
+      - ./trash/explorer-config:/app-root/config:ro

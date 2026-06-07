@@ -9,7 +9,7 @@ services:
       - CASSANDRA_RACK=rack1
       - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     ports:
-      - "9042:9042"  # CQL-порт (только для первой ноды)
+      - "9042:9042"  
     volumes:
       - cassandra1_data:/var/lib/cassandra
     healthcheck:

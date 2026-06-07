@@ -10,4 +10,5 @@ if [ ! -s "$PGDATA/PG_VERSION" ]; then
 fi
 
 chmod 0700 "$PGDATA"
-exec postgres
+chown -R postgres:postgres "$PGDATA"
+exec gosu postgres postgres

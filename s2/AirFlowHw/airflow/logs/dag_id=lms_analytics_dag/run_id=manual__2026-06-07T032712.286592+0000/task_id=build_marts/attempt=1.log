@@ -1,0 +1,18 @@
+[2026-06-07T03:27:49.540+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:49.583+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_analytics_dag.build_marts manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:49.594+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_analytics_dag.build_marts manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:49.595+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:49.696+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): build_marts> on 2026-06-07 03:27:12.286592+00:00
+[2026-06-07T03:27:49.701+0000] {standard_task_runner.py:64} INFO - Started process 421 to run task
+[2026-06-07T03:27:49.705+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_analytics_dag', 'build_marts', 'manual__2026-06-07T03:27:12.286592+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/lms_analytics_dag.py', '--cfg-path', '/tmp/tmpv5m_n76c']
+[2026-06-07T03:27:49.708+0000] {standard_task_runner.py:91} INFO - Job 37: Subtask build_marts
+[2026-06-07T03:27:49.887+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_analytics_dag.build_marts manual__2026-06-07T03:27:12.286592+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:50.331+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_analytics_dag' AIRFLOW_CTX_TASK_ID='build_marts' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:27:12.286592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:27:12.286592+00:00'
+[2026-06-07T03:27:50.332+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:50.691+0000] {base.py:84} INFO - Using connection ID 'clickhouse_lms' for task execution.
+[2026-06-07T03:27:51.268+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:51.269+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:51.282+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_analytics_dag, task_id=build_marts, run_id=manual__2026-06-07T03:27:12.286592+00:00, execution_date=20260607T032712, start_date=20260607T032749, end_date=20260607T032751
+[2026-06-07T03:27:51.405+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:51.428+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:51.516+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

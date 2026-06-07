@@ -1,0 +1,50 @@
+[2026-06-07T03:27:42.970+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:43.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_analytics_dag.load_clickhouse_raw manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:43.025+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_analytics_dag.load_clickhouse_raw manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:43.026+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:43.121+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_clickhouse_raw> on 2026-06-07 03:27:12.286592+00:00
+[2026-06-07T03:27:43.126+0000] {standard_task_runner.py:64} INFO - Started process 418 to run task
+[2026-06-07T03:27:43.129+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_analytics_dag', 'load_clickhouse_raw', 'manual__2026-06-07T03:27:12.286592+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/lms_analytics_dag.py', '--cfg-path', '/tmp/tmpnnaevpq6']
+[2026-06-07T03:27:43.131+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask load_clickhouse_raw
+[2026-06-07T03:27:43.331+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_analytics_dag.load_clickhouse_raw manual__2026-06-07T03:27:12.286592+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:43.862+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_analytics_dag' AIRFLOW_CTX_TASK_ID='load_clickhouse_raw' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:27:12.286592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:27:12.286592+00:00'
+[2026-06-07T03:27:43.863+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:44.322+0000] {base.py:84} INFO - Using connection ID 'clickhouse_lms' for task execution.
+[2026-06-07T03:27:44.605+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:44.613+0000] {sql.py:495} INFO - Running statement: 
+SELECT
+    f.enrollment_id,
+    d.full_date AS enroll_date,
+    fl.code AS flow_code,
+    fl.title AS flow_title,
+    u.name AS unit_name,
+    fl.modality,
+    f.status,
+    f.attendance_pct,
+    f.current_score,
+    f.is_dropped,
+    f.is_completed,
+    f.enrollment_cnt
+FROM olap.fact_enrollment f
+JOIN olap.dim_date d ON d.date_key = f.enroll_date_key
+JOIN olap.dim_flow fl ON fl.flow_key = f.flow_key
+JOIN olap.dim_unit u ON u.unit_key = f.unit_key
+, parameters: None
+[2026-06-07T03:27:45.208+0000] {sql.py:504} INFO - Rows affected: 250000
+[2026-06-07T03:27:46.502+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:46.511+0000] {sql.py:495} INFO - Running statement: 
+SELECT flow_id, code, title, modality, cohort_year, status, unit_id
+FROM olap.dim_flow
+, parameters: None
+[2026-06-07T03:27:46.745+0000] {sql.py:504} INFO - Rows affected: 250000
+[2026-06-07T03:27:47.351+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:47.369+0000] {sql.py:495} INFO - Running statement: 
+SELECT unit_id, name, type, status FROM olap.dim_unit
+, parameters: None
+[2026-06-07T03:27:47.371+0000] {sql.py:504} INFO - Rows affected: 100
+[2026-06-07T03:27:47.559+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:47.560+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:47.635+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_analytics_dag, task_id=load_clickhouse_raw, run_id=manual__2026-06-07T03:27:12.286592+00:00, execution_date=20260607T032712, start_date=20260607T032743, end_date=20260607T032747
+[2026-06-07T03:27:47.801+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:47.830+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:47.906+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

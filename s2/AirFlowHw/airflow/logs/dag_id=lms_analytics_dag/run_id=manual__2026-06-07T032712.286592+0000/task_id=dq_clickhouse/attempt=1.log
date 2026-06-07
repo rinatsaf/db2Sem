@@ -1,0 +1,21 @@
+[2026-06-07T03:27:52.293+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:52.325+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_analytics_dag.dq_clickhouse manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:52.332+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_analytics_dag.dq_clickhouse manual__2026-06-07T03:27:12.286592+00:00 [queued]>
+[2026-06-07T03:27:52.333+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:52.427+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dq_clickhouse> on 2026-06-07 03:27:12.286592+00:00
+[2026-06-07T03:27:52.432+0000] {standard_task_runner.py:64} INFO - Started process 424 to run task
+[2026-06-07T03:27:52.436+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_analytics_dag', 'dq_clickhouse', 'manual__2026-06-07T03:27:12.286592+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/lms_analytics_dag.py', '--cfg-path', '/tmp/tmp321ye5bg']
+[2026-06-07T03:27:52.440+0000] {standard_task_runner.py:91} INFO - Job 38: Subtask dq_clickhouse
+[2026-06-07T03:27:52.594+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_analytics_dag.dq_clickhouse manual__2026-06-07T03:27:12.286592+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:53.026+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_analytics_dag' AIRFLOW_CTX_TASK_ID='dq_clickhouse' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:27:12.286592+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:27:12.286592+00:00'
+[2026-06-07T03:27:53.027+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:53.329+0000] {base.py:84} INFO - Using connection ID 'clickhouse_lms' for task execution.
+[2026-06-07T03:27:53.345+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:53.353+0000] {sql.py:495} INFO - Running statement: SELECT COUNT(*) FROM olap.fact_enrollment, parameters: None
+[2026-06-07T03:27:53.363+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:53.632+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:53.632+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:53.645+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_analytics_dag, task_id=dq_clickhouse, run_id=manual__2026-06-07T03:27:12.286592+00:00, execution_date=20260607T032712, start_date=20260607T032752, end_date=20260607T032753
+[2026-06-07T03:27:53.776+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:53.797+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:53.969+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

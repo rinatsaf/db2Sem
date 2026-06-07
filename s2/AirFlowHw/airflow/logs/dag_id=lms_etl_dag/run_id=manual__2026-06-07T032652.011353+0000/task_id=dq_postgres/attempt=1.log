@@ -1,0 +1,26 @@
+[2026-06-07T03:27:08.732+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:08.761+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_etl_dag.dq_postgres manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:27:08.768+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_etl_dag.dq_postgres manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:27:08.770+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:08.855+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dq_postgres> on 2026-06-07 03:26:52.011353+00:00
+[2026-06-07T03:27:08.861+0000] {standard_task_runner.py:64} INFO - Started process 375 to run task
+[2026-06-07T03:27:08.864+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_etl_dag', 'dq_postgres', 'manual__2026-06-07T03:26:52.011353+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/lms_etl_dag.py', '--cfg-path', '/tmp/tmp8li_jq3f']
+[2026-06-07T03:27:08.867+0000] {standard_task_runner.py:91} INFO - Job 33: Subtask dq_postgres
+[2026-06-07T03:27:09.003+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_etl_dag.dq_postgres manual__2026-06-07T03:26:52.011353+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:09.234+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_etl_dag' AIRFLOW_CTX_TASK_ID='dq_postgres' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:26:52.011353+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:26:52.011353+00:00'
+[2026-06-07T03:27:09.236+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:09.299+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:09.308+0000] {sql.py:495} INFO - Running statement: SELECT COUNT(*) FROM discipline WHERE code = ANY(%s), parameters: (['CS101', 'CS201', 'CS301', 'MATH101', 'MATH201', 'PHYS101', 'ENG101', 'HIST201', 'ECON101', 'LAW101', 'BIO101', 'CHEM101', 'CS401', 'CS402', 'CS403', 'STAT301', 'FIN201', 'MGMT301', 'ART101', 'MUS101', 'RU201', 'DE101', 'PHY302', 'CS501', 'DATA201', 'WEB101', 'SEC301', 'NET201', 'OS201', 'AI401'],)
+[2026-06-07T03:27:09.322+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:09.324+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:09.332+0000] {sql.py:495} INFO - Running statement: SELECT COUNT(*) FROM discipline WHERE code = ANY(%s) AND unit_id IS NULL, parameters: (['CS101', 'CS201', 'CS301', 'MATH101', 'MATH201', 'PHYS101', 'ENG101', 'HIST201', 'ECON101', 'LAW101', 'BIO101', 'CHEM101', 'CS401', 'CS402', 'CS403', 'STAT301', 'FIN201', 'MGMT301', 'ART101', 'MUS101', 'RU201', 'DE101', 'PHY302', 'CS501', 'DATA201', 'WEB101', 'SEC301', 'NET201', 'OS201', 'AI401'],)
+[2026-06-07T03:27:09.334+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:09.348+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:09.356+0000] {sql.py:495} INFO - Running statement: SELECT COUNT(*) FROM classroom, parameters: None
+[2026-06-07T03:27:09.358+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:09.359+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:09.359+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:09.370+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_etl_dag, task_id=dq_postgres, run_id=manual__2026-06-07T03:26:52.011353+00:00, execution_date=20260607T032652, start_date=20260607T032708, end_date=20260607T032709
+[2026-06-07T03:27:09.478+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:09.505+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:09.605+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

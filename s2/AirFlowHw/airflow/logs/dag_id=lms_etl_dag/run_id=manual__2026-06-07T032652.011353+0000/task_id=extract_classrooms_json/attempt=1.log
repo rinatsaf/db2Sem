@@ -1,0 +1,16 @@
+[2026-06-07T03:26:56.728+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:26:56.758+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_etl_dag.extract_classrooms_json manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:26:56.767+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_etl_dag.extract_classrooms_json manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:26:56.769+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:26:56.873+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_classrooms_json> on 2026-06-07 03:26:52.011353+00:00
+[2026-06-07T03:26:56.882+0000] {standard_task_runner.py:64} INFO - Started process 331 to run task
+[2026-06-07T03:26:56.888+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_etl_dag', 'extract_classrooms_json', 'manual__2026-06-07T03:26:52.011353+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/lms_etl_dag.py', '--cfg-path', '/tmp/tmpb47nsbmv']
+[2026-06-07T03:26:56.893+0000] {standard_task_runner.py:91} INFO - Job 27: Subtask extract_classrooms_json
+[2026-06-07T03:26:57.102+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_etl_dag.extract_classrooms_json manual__2026-06-07T03:26:52.011353+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:26:57.474+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_etl_dag' AIRFLOW_CTX_TASK_ID='extract_classrooms_json' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:26:52.011353+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:26:52.011353+00:00'
+[2026-06-07T03:26:57.477+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:26:57.522+0000] {python.py:237} INFO - Done. Returned value was: /opt/airflow/data/staging/classrooms.json
+[2026-06-07T03:26:57.523+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:26:57.652+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_etl_dag, task_id=extract_classrooms_json, run_id=manual__2026-06-07T03:26:52.011353+00:00, execution_date=20260607T032652, start_date=20260607T032656, end_date=20260607T032657
+[2026-06-07T03:26:57.826+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:26:57.841+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

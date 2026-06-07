@@ -1,0 +1,31 @@
+code,title,ects_credits,level,unit_code,language
+CS101,Introduction to Programming,6.0,bachelor,UNIT1,en
+CS201,Data Structures and Algorithms,8.0,bachelor,UNIT1,en
+CS301,Database Systems,6.0,bachelor,UNIT2,en
+MATH101,Calculus I,5.0,bachelor,UNIT3,en
+MATH201,Linear Algebra,5.0,bachelor,UNIT3,en
+PHYS101,General Physics,6.0,bachelor,UNIT4,en
+ENG101,Academic Writing,3.0,bachelor,UNIT5,en
+HIST201,History of Science,4.0,bachelor,UNIT6,en
+ECON101,Microeconomics,5.0,bachelor,UNIT7,en
+LAW101,Introduction to Law,4.0,bachelor,UNIT8,en
+BIO101,Cell Biology,6.0,bachelor,UNIT9,en
+CHEM101,General Chemistry,6.0,bachelor,UNIT10,en
+CS401,Distributed Systems,8.0,master,UNIT1,en
+CS402,Machine Learning,8.0,master,UNIT1,en
+CS403,Cloud Computing,6.0,master,UNIT2,en
+STAT301,Probability Theory,6.0,master,UNIT3,en
+FIN201,Corporate Finance,5.0,master,UNIT7,en
+MGMT301,Project Management,4.0,master,UNIT7,en
+ART101,Art History Survey,3.0,bachelor,UNIT6,en
+MUS101,Music Theory Basics,3.0,bachelor,UNIT6,en
+RU201,Russian Literature,4.0,bachelor,UNIT5,ru
+DE101,German for Beginners,3.0,bachelor,UNIT5,de
+PHY302,Quantum Mechanics,8.0,master,UNIT4,en
+CS501,Thesis Seminar,10.0,master,UNIT1,en
+DATA201,Data Analytics with SQL,5.0,bachelor,UNIT2,en
+WEB101,Web Development Fundamentals,5.0,bachelor,UNIT1,en
+SEC301,Information Security,6.0,master,UNIT2,en
+NET201,Computer Networks,6.0,bachelor,UNIT1,en
+OS201,Operating Systems,6.0,bachelor,UNIT1,en
+AI401,Deep Learning,8.0,master,UNIT1,en

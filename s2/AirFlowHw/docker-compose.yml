@@ -1,0 +1,141 @@
+x-airflow-common: &airflow-common
+  image: apache/airflow:2.9.3-python3.11
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:adminpass@postgres:5432/airflow
+    # Same secret on webserver + scheduler (required for log UI, fixes 403 FORBIDDEN)
+    AIRFLOW__WEBSERVER__SECRET_KEY: 'lms_course_db_sem2_airflow_secret_key_2025'
+    AIRFLOW__CORE__FERNET_KEY: 'qE8n0pL3vR6yU9wX2zA5bC7dF0gH4jK6mN8pQ1sT3vY='
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
+    AIRFLOW_CONN_POSTGRES_LMS: 'postgresql://admin:adminpass@postgres:5432/course_db'
+    AIRFLOW_CONN_CLICKHOUSE_LMS: 'clickhouse://default:lmspass@clickhouse:8123/lms'
+    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-apache-airflow-providers-postgres==5.12.0 clickhouse-connect==0.7.19 pandas==2.2.2 psycopg2-binary==2.9.9 pyarrow==16.1.0}
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./data:/opt/airflow/data
+    - ./db:/opt/airflow/db
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on:
+    postgres:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: pg_course
+    environment:
+      POSTGRES_DB: course_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpass
+    ports:
+      - "15432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db:/db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d course_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  flyway:
+    image: flyway/flyway
+    container_name: flyway
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command:
+      - "migrate"
+      - "-baselineOnMigrate=true"
+    volumes:
+      - ./db/migrations:/flyway/sql
+    environment:
+      FLYWAY_URL: jdbc:postgresql://postgres:5432/course_db
+      FLYWAY_USER: admin
+      FLYWAY_PASSWORD: adminpass
+      FLYWAY_BASELINE_VERSION: 0
+      FLYWAY_BASELINE_DESCRIPTION: "Initial baseline"
+      FLYWAY_SCHEMAS: public
+      FLYWAY_LOCATIONS: filesystem:/flyway/sql
+      FLYWAY_CLEAN_DISABLED: false
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: ch_lms
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - ch_data:/var/lib/clickhouse
+      - ./clickhouse/init:/docker-entrypoint-initdb.d
+      - ./clickhouse/users.d/default-user.xml:/etc/clickhouse-server/users.d/default-user.xml
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    healthcheck:
+      test: ["CMD-SHELL", "clickhouse-client --query 'SELECT 1'"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  airflow-init:
+    <<: *airflow-common
+    container_name: airflow_init
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        PGPASSWORD=adminpass psql -h postgres -U admin -d postgres -tc "SELECT 1 FROM pg_database WHERE datname='airflow'" | grep -q 1 \
+          || PGPASSWORD=adminpass psql -h postgres -U admin -d postgres -c "CREATE DATABASE airflow;"
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --password admin \
+          --firstname LMS \
+          --lastname Admin \
+          --role Admin \
+          --email admin@lms.local || true
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: airflow_web
+    command: webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: airflow_scheduler
+    command: scheduler
+    healthcheck:
+      test: ["CMD", "airflow", "jobs", "check", "--job-type", "SchedulerJob", "--limit", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+
+volumes:
+  pg_data:
+  ch_data:

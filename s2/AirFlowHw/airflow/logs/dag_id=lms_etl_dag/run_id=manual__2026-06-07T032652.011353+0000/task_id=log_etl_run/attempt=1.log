@@ -1,0 +1,35 @@
+[2026-06-07T03:27:05.649+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-07T03:27:05.685+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lms_etl_dag.log_etl_run manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:27:05.694+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lms_etl_dag.log_etl_run manual__2026-06-07T03:26:52.011353+00:00 [queued]>
+[2026-06-07T03:27:05.695+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-06-07T03:27:05.810+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): log_etl_run> on 2026-06-07 03:26:52.011353+00:00
+[2026-06-07T03:27:05.816+0000] {standard_task_runner.py:64} INFO - Started process 362 to run task
+[2026-06-07T03:27:05.821+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'lms_etl_dag', 'log_etl_run', 'manual__2026-06-07T03:26:52.011353+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/lms_etl_dag.py', '--cfg-path', '/tmp/tmpht7vrfhb']
+[2026-06-07T03:27:05.823+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask log_etl_run
+[2026-06-07T03:27:06.074+0000] {task_command.py:426} INFO - Running <TaskInstance: lms_etl_dag.log_etl_run manual__2026-06-07T03:26:52.011353+00:00 [running]> on host 5672866a0c22
+[2026-06-07T03:27:06.404+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='lms' AIRFLOW_CTX_DAG_ID='lms_etl_dag' AIRFLOW_CTX_TASK_ID='log_etl_run' AIRFLOW_CTX_EXECUTION_DATE='2026-06-07T03:26:52.011353+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-07T03:26:52.011353+00:00'
+[2026-06-07T03:27:06.405+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-07T03:27:06.460+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:06.468+0000] {sql.py:495} INFO - Running statement: 
+        INSERT INTO etl_load_log (dag_run_id, source_name, rows_loaded)
+        VALUES (%s, %s, %s)
+        ON CONFLICT (dag_run_id, source_name) DO UPDATE SET
+            rows_loaded = EXCLUDED.rows_loaded,
+            loaded_at = now()
+    , parameters: ('manual__2026-06-07T03:26:52.011353+00:00', 'disciplines_catalog.csv', 30)
+[2026-06-07T03:27:06.484+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:06.642+0000] {base.py:84} INFO - Using connection ID 'postgres_lms' for task execution.
+[2026-06-07T03:27:06.650+0000] {sql.py:495} INFO - Running statement: 
+        INSERT INTO etl_load_log (dag_run_id, source_name, rows_loaded)
+        VALUES (%s, %s, %s)
+        ON CONFLICT (dag_run_id, source_name) DO UPDATE SET
+            rows_loaded = EXCLUDED.rows_loaded,
+            loaded_at = now()
+    , parameters: ('manual__2026-06-07T03:26:52.011353+00:00', 'classrooms.json', 20)
+[2026-06-07T03:27:06.652+0000] {sql.py:504} INFO - Rows affected: 1
+[2026-06-07T03:27:06.721+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-06-07T03:27:06.721+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-07T03:27:06.738+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=lms_etl_dag, task_id=log_etl_run, run_id=manual__2026-06-07T03:26:52.011353+00:00, execution_date=20260607T032652, start_date=20260607T032705, end_date=20260607T032706
+[2026-06-07T03:27:06.837+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-07T03:27:06.869+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-07T03:27:06.948+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
